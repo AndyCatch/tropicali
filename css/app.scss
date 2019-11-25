@@ -13,3 +13,12 @@ body{
   line-height:1.5;
 
 }
+
+section{
+  background-color: #ffffff;
+  color:$primary-color;
+
+  p{
+    margin: 24px 0 0 0;
+  }
+}
