@@ -1,0 +1,22 @@
+{
+  "name": "tropicali",
+  "version": "1.0.0",
+  "description": "SuperHi Git+Command Line Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndyCatch/tropicali.git"
+  },
+  "author": "Andy Catch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndyCatch/tropicali/issues"
+  },
+  "homepage": "https://github.com/AndyCatch/tropicali#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
