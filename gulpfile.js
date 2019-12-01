@@ -7,6 +7,8 @@ var browserSync = require('browser-sync').create()
 
 var imagemin = require('gulp-imagemin')
 
+var ghPages = require('gh-pages')
+
 sass.compiler = require('node-sass')
 
 gulp.task("sass", function(){
@@ -28,7 +30,8 @@ gulp.task("sass", function(){
 
 // we need to push our output to the right file
 gulp.task("html", function(){
-  return gulp.src("src/index.html")
+  //  using "*.html" ensures that any html file will be piped
+  return gulp.src("src/*.html")
     .pipe(gulp.dest("dist"))
 })
 
@@ -52,13 +55,17 @@ gulp.task("watch", function(){
   }
 })
 
-  gulp.watch("src/index.html", ["html"]).on("change", browserSync.reload)
+  gulp.watch("src/*.html", ["html"]).on("change", browserSync.reload)
 
   // we want to set Gulp to watch for the change in the .scss file
   gulp.watch("src/css/app.scss", ["sass"])
   // this watches for any new fonts added / removed
   gulp.watch("src/fonts/*", ["fonts"])
   gulp.watch("src/img/*", ["images"])
+})
+
+gulp.task("deploy", function(){
+  ghPages.publish('dist')
 })
 
 
