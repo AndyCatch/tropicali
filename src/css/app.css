@@ -1,0 +1,17 @@
+/*  VS Code won't recognize it, it's a future feature */
+@custom-media --mq-medium (max-width: 800px);
+
+:root{
+  --primary-color:red;
+}
+
+@media (--mq-medium){
+  :root{
+    --primary-color:yellow;
+  }
+}
+
+body{
+  font-family: "Jost";
+  background-color: var(--primary-color);
+}
