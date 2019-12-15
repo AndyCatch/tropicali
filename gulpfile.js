@@ -76,7 +76,7 @@ gulp.task("watch", function(){
   gulp.watch("src/*.html", ["html"]).on("change", browserSync.reload)
 
   // we want to set Gulp to watch for the change in the .scss file
-  gulp.watch("src/css/app.css", ["css"])
+  gulp.watch("src/css/*.css", ["css"])
   // this watches for any new fonts added / removed
   gulp.watch("src/fonts/*", ["fonts"])
   gulp.watch("src/img/*", ["images"])
