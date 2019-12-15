@@ -93,6 +93,12 @@ section.centered{
   margin-right: auto;
 }
 
+section.centered img{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  max-width: 200px;
+}
+
 .button{
   display: inline-block;
   color:var(--text-on-dark);
